@@ -1,0 +1,49 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans"/>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<app-login-nav></app-login-nav>
+<h2 style="text-align:center">Hello {{_currentUser.name}}</h2>
+
+<div class="card">
+  <img src="../../assets/img/anonymous-user.png" alt="pic"  style="width:100%">
+  <h1 >{{_currentUser.name}}</h1>
+  <p class="title">{{_currentUser.email}}</p>
+  <p></p>
+
+  <form [formGroup] = "myGroup">
+    <div class="form-floating">
+        <input formControlName="name" type="name" class="form-control" id="floatingName" placeholder="Name">
+        <label for="floatingInput">Name</label>
+      </div>
+      <div class="form-floating">
+        <input formControlName="surname" type="surname" class="form-control" id="floatingSurname" placeholder="Surname">
+        <label for="floatingInput">Surname</label>
+      </div>
+    <div class="form-floating">
+      <input formControlName="email" type="email" class="form-control" id="floatingEmail" placeholder="name@example.com">
+      <label for="floatingInput">Email address</label>
+    </div>
+
+  <p><button (click) ="changeInfo()">Change information</button></p>
+</form>
+<form [formGroup]="myGroup2">
+    <div class="form-floating">
+      <input formControlName="password" type="password" class="form-control" id="floatingPassword"  formControlName="password"  placeholder="Password">
+      <label for="floatingPassword">New password</label>
+    </div>
+    <p><button (click) = "changePassword()">Change password</button></p>
+  </form>
+  <div class="space">
+      
+</div>  
+
+
+</div> 

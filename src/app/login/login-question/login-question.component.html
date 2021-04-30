@@ -1,0 +1,72 @@
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<app-login-nav></app-login-nav>
+<div class="container fill">
+
+
+
+
+
+    <div class="row chat-wrap">
+        <div class="row header-wrap">
+            <div class="chat-header col-sm-12">
+                <h4>Questions</h4>
+                <div class="header-button">
+                    <a class="btn pull-right info-btn">
+                        <i class="fa fa-info-circle fa-lg"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div *ngFor="let questions of questions20">
+            <div style="border: 1px solid black; background-color: rgb(119, 189, 246); font-size: 30px;">{{ questions.question  }}</div>
+         
+            <div *ngFor="let answer of allAnswers">
+                <div *ngIf = "questions.id == answer.questionid" style=" background-color: rgb(204, 227, 246); font-size: 20px;">
+                    {{ answer.answer }}
+                </div>
+              
+            </div>
+         </div>
+       
+        <input type="button" (click)="LoadMore()" value="Load more">
+     <form>
+        <div class="row send-wrap">
+            <div class="send-message">
+                <div class="message-text">
+                    <textarea #answerInput class="no-resize-bar form-control" rows="2" placeholder="Write a message..."></textarea>
+                </div>
+                <div class="send-button">
+                    <a class="btn" (click)="send(answerInput.value)">Send <i class="fa fa-send"></i></a>
+                </div>
+            </div>
+        </div>
+    </form>  
+
+    </div>
+    <div class="space">
+
+    </div>
+    <div class="space">
+
+    </div>
+    <div class="space">
+
+    </div>
+    <div class="space">
+
+    </div>
+
+
+
+</div>

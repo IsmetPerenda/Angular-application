@@ -1,0 +1,126 @@
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans"/>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<app-login-nav></app-login-nav>
+<div class="container fill">
+    <div class="row chat-wrap">
+
+
+
+
+               
+                <div class="row header-wrap">
+                    <div class="chat-header col-sm-12">
+                        <h4>Questions</h4>
+                        <div class="header-button">
+                            <a class="btn pull-right info-btn">
+                                <i class="fa fa-info-circle fa-lg"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <table class="table table-striped">
+                    <thead>
+         
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let questions of lastTwentyQuestions">
+                        <td style="text-align: center; font-size: 30px;">{{ questions.question }}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <input type="button" (click)="LoadMore()" value="Load more">
+ 
+    </div>
+    <div class="space">
+
+    </div>
+    <div class="row chat-wrap">
+   
+    <div class="row header-wrap">
+        <div class="chat-header col-sm-12">
+            <h4>USERS</h4>
+            <div class="header-button">
+                <a class="btn pull-right" href="#Contacts" data-toggle="collapse">
+                    <i class="fa fa-close"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    
+        <table class="table table-striped">
+            <thead>
+ 
+            </thead>
+            <tbody>
+              <tr *ngFor="let user of users">
+                <td style="text-align: center; font-size: 30px;">{{ user.name }}</td>
+              </tr>
+            </tbody>
+          </table>
+
+    </div>
+
+
+
+<div class="space">
+
+</div>
+
+
+
+
+
+
+
+
+
+<div class="row chat-wrap">
+
+
+
+
+
+    <div class="row header-wrap">
+        <div class="chat-header col-sm-12">
+            <h4>HOT QUESTIONS</h4>
+            <div class="header-button">
+                <a class="btn pull-right info-btn">
+                    <i class="fa fa-info-circle fa-lg"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+    <div>
+        <table class="table table-striped">
+            <thead>
+ 
+            </thead>
+            <tbody>
+              <tr *ngFor="let question of hotQuestions">
+                <td style="text-align: center; font-size: 30px;">{{ question.question }}</td>
+              </tr>
+            </tbody>
+          </table>
+
+
+</div>
+
+
+
+</div>
+
+
