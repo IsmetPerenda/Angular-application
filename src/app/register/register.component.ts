@@ -32,7 +32,7 @@ submit():void{
   if (this.form.invalid) {
     return;
 }
- this.http.post('http://localhost:3000/users', this.form.getRawValue()).subscribe(
+ this.http.post('https://fake-server-api.herokuapp.com/users', this.form.getRawValue()).subscribe(
 
   () => this.router.navigate(['./login'])
   )

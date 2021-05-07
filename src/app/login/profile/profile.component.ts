@@ -37,7 +37,7 @@ export class ProfileComponent implements OnInit {
     this.myGroup2 = this.fromBuilder.group({
       password:'',
     });
-   this.http.get('http://localhost:3000/users/1').subscribe(data =>{
+   this.http.get('https://fake-server-api.herokuapp.com/users/1').subscribe(data =>{
     this._currentUser = data
 
    });
@@ -47,7 +47,7 @@ export class ProfileComponent implements OnInit {
   }
   changeInfo(){
 
-  this.http.put('http://localhost:3000/users/1',this.myGroup.getRawValue()).subscribe(data => console.log(data))
+  this.http.put('https://fake-server-api.herokuapp.com/users/1',this.myGroup.getRawValue()).subscribe(data => console.log(data))
   window.location.reload();
   }
   changePassword(){

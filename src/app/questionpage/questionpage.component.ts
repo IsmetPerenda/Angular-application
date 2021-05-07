@@ -16,7 +16,7 @@ export class QuestionpageComponent implements OnInit {
   ngOnInit(): void {
 
 
-    this.http.get("http://localhost:3000/questions").subscribe(data => {
+    this.http.get("https://fake-server-api.herokuapp.com/questions").subscribe(data => {
       this.questions = data
       //   console.log(this.lastquestions)
       var br = 0;
@@ -25,7 +25,7 @@ export class QuestionpageComponent implements OnInit {
         br++
       }
 
-      this.http.get("http://localhost:3000/answers").subscribe(data => {
+      this.http.get('https://fake-server-api.herokuapp.com/answers').subscribe(data => {
         this.allAnswers = data
       });
 
@@ -36,7 +36,7 @@ export class QuestionpageComponent implements OnInit {
     if (this.questions20.length == this.questions.length) {
       return;
     }
-    this.http.get("http://localhost:3000/questions").subscribe(data => {
+    this.http.get('https://fake-server-api.herokuapp.com/questions').subscribe(data => {
       this.questions = data
 
       var br = 20;

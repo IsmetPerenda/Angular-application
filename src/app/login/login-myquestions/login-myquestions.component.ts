@@ -11,7 +11,7 @@ myQuestions : any
   constructor(  private http: HttpClient,) { }
 
   ngOnInit(): void {
-    this.http.get('http://localhost:3000/questions/?userid=1').subscribe(data =>{
+    this.http.get('https://fake-server-api.herokuapp.com/questions/?userid=1').subscribe(data =>{
       this.myQuestions = data
  // console.log(this.myQuestions)
      });

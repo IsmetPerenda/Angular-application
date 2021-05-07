@@ -28,7 +28,7 @@ export class AuthServiceService {
   login(user: User):any {
     var pogresno = true;
     var id = 0;
-    this.http.get("http://localhost:3000/users").subscribe(data => {
+    this.http.get('https://fake-server-api.herokuapp.com/users').subscribe(data => {
       this.users = data
 var i = 0;
 
